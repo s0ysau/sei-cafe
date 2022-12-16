@@ -5,6 +5,7 @@ import NewOrderPage from './pages/NewOrder/NewOrderPage';
 import OrderHistoryPage from './pages/OrderHistory/OrderHistoryPage';
 import { Routes, Route } from "react-router-dom"
 import NavBar from './components/NavBar';
+import FruitsPage from './pages/Fruits/FruitsPage';
 
 function App() {
   const [state, setState] = useState(null)
@@ -31,6 +32,7 @@ function App() {
       <>
         <NavBar />
         <Routes>
+          <Route path="/fruits" element={<FruitsPage />} />
           <Route path="/orders/new" element={<NewOrderPage />} />
           <Route path="/orders" element={<OrderHistoryPage />} />
         </Routes>
