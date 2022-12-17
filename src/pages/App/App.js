@@ -1,11 +1,10 @@
-import './App.css';
 import { useState, useEffect } from 'react'
-import AuthPage from './pages/Auth/AuthPage';
-import NewOrderPage from './pages/NewOrder/NewOrderPage';
-import OrderHistoryPage from './pages/OrderHistory/OrderHistoryPage';
 import { Routes, Route } from "react-router-dom"
-import NavBar from './components/NavBar';
-import FruitsPage from './pages/Fruits/FruitsPage';
+import AuthPage from '../Auth/AuthPage';
+import NewOrderPage from '../NewOrder/NewOrderPage';
+import OrderHistoryPage from '../OrderHistory/OrderHistoryPage';
+import NavBar from '../../components/NavBar';
+import FruitsPage from '../Fruits/FruitsPage';
 
 function App() {
   const [state, setState] = useState(null)
