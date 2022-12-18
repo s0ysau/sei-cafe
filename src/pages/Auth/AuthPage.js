@@ -1,5 +1,10 @@
+import SignUpForm from "../../components/SignUpForm/SignUpForm";
+
 export default function AuthPage() {
   return (
-    <h1>Authentication Page</h1>
+    <main>
+      <h1>Authentication Page</h1>
+      <SignUpForm />
+    </main>
   )
 }
