@@ -63,5 +63,4 @@ async function history(req, res) {
   }catch(e){
     res.status(400).json({ msg: e.message });
   }
-
 }
