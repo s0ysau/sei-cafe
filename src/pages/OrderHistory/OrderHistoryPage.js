@@ -5,7 +5,7 @@ import * as ordersAPI from '../../utilities/orders-api';
 import Logo from '../../components/Logo/Logo';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import OrderList from '../../components/OrderList/OrderList';
-import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import OrderDetail from '../../components/OrderDetails/OrderDetails';
 
 export default function OrderHistoryPage({ user, setUser }) {
   /*--- State --- */
