@@ -1,17 +1,17 @@
-import styles from '../UserLogOut/UserLogOut';
-import { logOut } from '../../utilites/users-service';
+import styles from '../UserLogOut/UserLogOut'
+import { logOut } from '../../utilites/users-service'
 
-export default function UserLogOut({ user, setUser }) {
-function handleLogOut() {
-  logOut();
-  setUser(null);
-}
+export default function UserLogOut ({ user, setUser }) {
+  function handleLogOut () {
+    logOut()
+    setUser(null)
+  }
 
-return (
-  <div className={styles.UserLogOut}>
-    <div>{user.name}</div>
-    <div className={styles.email}>{user.email}</div>
-    <button className="btn-sm" onClick={handleLogOut}>LOG OUT</button>
-  </div>
-);
+  return (
+    <div className={styles.UserLogOut}>
+      <div>{user.name}</div>
+      <div className={styles.email}>{user.email}</div>
+      <button className='btn-sm' onClick={handleLogOut}>LOG OUT</button>
+    </div>
+  )
 }

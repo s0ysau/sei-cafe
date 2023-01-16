@@ -1,4 +1,4 @@
-require('dotenv').config() 
+require('dotenv').config()
 require('./config/database')
 const express = require('express')
 const path = require('path')
@@ -10,16 +10,16 @@ const app = express()
 
 app.use(express.json())// req.body
 app.use((req, res, next) => {
-    res.locals.data = {}
-    next()
+  res.locals.data = {}
+  next()
 })
 app.use(logger('dev'))
-app.use(favicon(path.join(__dirname, 'build', 'favicon.ico' )))
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')))
 app.use(express.static(path.join(__dirname, 'build')))
 
 app.use(require('./config/checkToken'))
 /*
-app.use('/api', routes) <=== Finish code once you got it 
+app.use('/api', routes) <=== Finish code once you got it
 */
 app.use('/api/users', require('./routes/api/users'))
 app.use('/api/fruits', require('./routes/api/fruits'))
@@ -29,7 +29,7 @@ app.use('/api/items', ensureLoggedIn, require('./routes/api/items'))
 app.use('/api/orders', ensureLoggedIn, require('./routes/api/orders'))
 
 app.get('/api/test', (req, res) => {
-  res.json({'eureka': 'you have found it'})
+  res.json({ eureka: 'you have found it' })
 })
 
 app.get('*', (req, res) => {
