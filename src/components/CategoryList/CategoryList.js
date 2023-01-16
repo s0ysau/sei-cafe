@@ -1,4 +1,4 @@
-import styles from '../CategoryList/CategoryList';
+import styles from '../CategoryList/CategoryList.module.scss';
 
 export default function CategoryList({ categories, activeCat, setActiveCat }) {
   const cats = categories.map(cat =>
